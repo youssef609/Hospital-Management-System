@@ -1,0 +1,31 @@
+﻿@using Hospital.ViewModels
+@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="main-agileinfo">
+	<div class="agileits-top">
+		<div asp-validation-summary="All" style="color:red" class="text-danger"></div>
+
+		<form asp-action="Login" asp-controller="Admin" method="Post">
+			<input type="email" asp-for="Email" placeholder="Email" required="">
+			<span asp-validation-for="Email" style="color:red"></span>
+			<br />
+
+
+			@*type=Passowrd: to be hidden*@
+			<input type="Password" asp-for="Password" placeholder="Password" required="">
+			<span asp-validation-for="Password" style="color:red"></span>
+			<br />
+
+
+			<input type="submit" value="LOGIN">
+		</form>
+	</div>
+</div>
+@section ValidationScriptSection
+{
+	<partial name="_ValidationScriptsPartial" />
+}
