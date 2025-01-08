@@ -10,7 +10,7 @@ namespace Hospital.Helpers
 		{
 			var Client = new SmtpClient("smtp.gmail.com", 587);
 			Client.EnableSsl = true;
-			Client.Credentials = new NetworkCredential("nourtamer202@gmail.com", "nzzvnglpjrdkodnh");
+			Client.Credentials = new NetworkCredential("//gmail", "nzzvnglpjrdkodnhs");
 			Client.Send("nourtamer202@gmail.com", email.To, email.Subject, email.Body);
 		}
 	}
